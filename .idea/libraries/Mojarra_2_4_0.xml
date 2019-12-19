@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Mojarra-2.4.0" type="jsf">
+    <properties version="2.4.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/javax.faces-2.4.0.jar!/" />
+      <root url="jar://C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.18.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
