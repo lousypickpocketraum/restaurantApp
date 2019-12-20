@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form id="form2" action="menuEkle" method="post">
+<form id="form2" action="dbAdd" method="post">
     <table>
         <table width="200" border="1">
             <tr>
