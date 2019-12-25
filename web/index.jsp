@@ -13,7 +13,7 @@
 
 </head>
 <body>
-<form id="form2" action="dbAdd" method="post">
+<form id="form1" action="dbAdd" method="post">
     <table>
         <table width="200" border="1">
             <tr>
@@ -25,7 +25,27 @@
                 <th><input type="text" name="yemekUcreti" /></th>
             </tr>
             <tr>
-                <th><input type="submit" name="gonder" value="Menüye Ekle" style="float:right"/></th>
+                <th><input type="submit" name="gonder" value="Menüye Ekle"/></th>
+            </tr>
+        </table>
+</form>
+<form id="form2" action="dbUpdate" method="post">
+    <table>
+        <table width="200" border="1">
+            <tr>
+                <th><label>Güncellemek istediğiniz menü idsini giriniz</label></th>
+                <th><input type="text" name="id" /></th>
+            </tr>
+            <tr>
+                <th><label>Yeni Yemek Adı </label></th>
+                <th><input type="text" name="yeniYemekAdi" /></th>
+            </tr>
+            <tr>
+                <th> <label>Yeni Yemek Ücreti</label></th>
+                <th><input type="text" name="yeniYemekUcreti" /></th>
+            </tr>
+            <tr>
+                <th><input type="submit" name="gonder" value="Güncelle"/></th>
             </tr>
         </table>
 </form>
@@ -39,11 +59,11 @@
                 <tr>
                     <td><c:out value="${item.id}" /></td>
                     <td><c:out value="${item.yemekAdi}" /></td>
-                    <td><c:out value="${item.yemekUcreti}" /></td>
+                    <td><c:out value="${item.yemekUcreti}" />₺</td>
                     <td>
-	                    <form id="form2" action="dbDelete" method="post">
+	                    <form id="form3" action="dbDelete" method="post">
 	                    	<input type="hidden" name="id" value="${item.id}" />
-	                    	<input type="submit" name="gonder" value="Sil" style="float:right"/>
+	                    	<input type="submit" name="gonder" value="Sil" />
 	                    </form>
                     </td>
                 </tr>

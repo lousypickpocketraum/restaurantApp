@@ -17,9 +17,9 @@ public class dbDelete extends HttpServlet {
 		PreparedStatement stat = null;
 		try {
 			Connection connection = dbConnection.getConnection();
-			String add = "DELETE FROM menu WHERE id="+id;
-			stat = connection.prepareStatement(add);
-			stat.executeUpdate(add);
+			String delete = "DELETE FROM menu WHERE id="+id;
+			stat = connection.prepareStatement(delete);
+			stat.executeUpdate(delete);
 			// anasayfaya yönlendirme
 			response.sendRedirect(request.getContextPath());
 		} catch (SQLException | ClassNotFoundException e) {
