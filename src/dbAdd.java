@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-@WebServlet(name="dbAdd")
+@WebServlet(urlPatterns = "/dbAdd")
 public class dbAdd extends HttpServlet {
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
@@ -24,6 +24,8 @@ public class dbAdd extends HttpServlet {
   	                + "VALUES (" + "'" + yemekAdiEkle + "'" +"," + yemekUcretiEkle2 + ")";
  			 stat = connection.prepareStatement(add);
  			 stat.executeUpdate(add);
+ 			 // anasayfaya yönlendirme
+ 			response.sendRedirect(request.getContextPath());
 		} catch (SQLException| ClassNotFoundException e) {
 			e.printStackTrace();
 		} finally {
