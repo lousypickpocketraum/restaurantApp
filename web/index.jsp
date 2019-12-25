@@ -11,21 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-<form id="form2" action="dbAdd" method="post">
-    <table>
-        <table width="200" border="1">
-            <tr>
-                <th><label>Yemek Adı </label></th>
-                <th><input type="text" name="yemekAdi" /></th>
-            </tr>
-            <tr>
-                <th> <label>Yemek Ücreti</label></th>
-                <th><input type="text" name="yemekUcreti" /></th>
-            </tr>
-            <tr>
-              <th><input type="submit" name="gonder" value="Menüye Ekle" style="float:right"/></th>
-            </tr>
-        </table>
-</form>
+<a href="MenuDuzenle.jsp">Menü düzenlemesi için tıklayınız...</a>
+Sipariş vermek için tıklayınız...
+Sipariş bilgilerini görüntülemek için tıklayınız...
 </body>
 </html>
