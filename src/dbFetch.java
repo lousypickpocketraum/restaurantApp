@@ -42,9 +42,9 @@ public class dbFetch extends HttpServlet {
             arrayList.add(menuItem);
         }
         request.setAttribute("items",arrayList);
-     
-        RequestDispatcher rd = request.getRequestDispatcher("index.jsp"); 
-         rd.forward(request, response); 
+
+        RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+         rd.forward(request, response);
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         } catch (ServletException e) {
