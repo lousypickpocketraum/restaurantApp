@@ -26,11 +26,11 @@ public class dbFetch extends HttpServlet {
     response.setCharacterEncoding("UTF-8");
     PreparedStatement stat=null;
     try {
-        Connection connection = dbConnection.getConnection();
-        String sql = "select * from menu";
-        stat = connection.prepareStatement(sql);
-        ResultSet rs = stat.executeQuery();
-        List<MenuItem> arrayList = new ArrayList<MenuItem>();
+            Connection connection = dbConnection.getConnection();
+            String sql = "select * from menu";
+            stat = connection.prepareStatement(sql);
+            ResultSet rs = stat.executeQuery();
+            List<MenuItem> arrayList = new ArrayList<MenuItem>();
         while (rs.next()) {
             int id_col = rs.getInt("id");
             String yemek_adi = rs.getString("yemekadi");
