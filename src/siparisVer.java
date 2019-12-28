@@ -16,7 +16,7 @@ import java.util.List;
 @WebServlet(urlPatterns = "/siparisVer")
 public class siparisVer extends HttpServlet {
     @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         response.setCharacterEncoding("UTF-8");
         PreparedStatement stat=null;

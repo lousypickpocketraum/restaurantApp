@@ -19,7 +19,7 @@
     </tr>
 <c:forEach var="item2" items="${items}">
     <tr>
-        <td><c:out value="${item2.siparisYemekUcreti}" /></td>
+        <td><c:out value="${item2.siparisYemekAdi}" /></td>
         <td><c:out value="${item2.siparisYemekUcreti}" />₺</td>
         <td>
             <form id="form4" action="siparisEkle" method="post">
