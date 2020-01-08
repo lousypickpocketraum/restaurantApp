@@ -32,5 +32,27 @@
     </tr>
 </c:forEach>
 </table>
+
+-----Sipariş Ver-----
+
+<table border="1" width="200">
+    <tr>
+        <th>Yemek adı</th>
+        <th>Yemek ücreti</th>
+        <th>Yemek adedi</th>
+    </tr>
+    <c:forEach var="item3" items="${items2}">
+        <tr>
+            <td><c:out value="${item3.siparisYemekAdi}" /></td>
+            <td><c:out value="${item3.siparisYemekUcreti}" />₺</td>
+            <td><c:out value="${item3.siparisAdeti}" /></td>
+        </tr>
+    </c:forEach>
+    <tr>
+        <td>Tutar =</td>
+        <td></td>
+        <td>Sepeti Onayla Butonu :(</td>
+    </tr>
+</table>
 </body>
 </html>

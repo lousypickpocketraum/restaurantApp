@@ -27,7 +27,8 @@ public class siparisEkle extends HttpServlet {
                     + "VALUES (" + "'" + siparis_yemek_adi + "'" +"," + siparis_yemek_ucreti + "," + siparis_adet2+")";
             stat = connection.prepareStatement(siparisadd);
             stat.executeUpdate(siparisadd);
-            response.sendRedirect(request.getContextPath());
+            // siparisVer yönlendirme
+            response.sendRedirect("siparisVer");
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         } finally {

@@ -16,8 +16,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-// anasayfaya gitmek için urlPattern boþ string olmalý
-@WebServlet(urlPatterns = "")
+
+@WebServlet(urlPatterns = "/menuDuzenle")
 public class dbFetch extends HttpServlet {
 	
     @Override
@@ -43,7 +43,7 @@ public class dbFetch extends HttpServlet {
         }
         request.setAttribute("items",arrayList);
 
-        RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("MenuDuzenle.jsp");
          rd.forward(request, response);
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();

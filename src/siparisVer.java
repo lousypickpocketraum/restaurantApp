@@ -20,8 +20,10 @@ public class siparisVer extends HttpServlet {
 
         response.setCharacterEncoding("UTF-8");
         PreparedStatement stat=null;
+        PreparedStatement stat2=null;
         try {
             Connection connection = dbConnection.getConnection();
+            //menudeki verileri çekiyor
             String sql = "select * from menu";
             stat = connection.prepareStatement(sql);
             ResultSet rs = stat.executeQuery();
@@ -35,6 +37,24 @@ public class siparisVer extends HttpServlet {
                 arrayList2.add(siparisItem);
             }
             request.setAttribute("items",arrayList2);
+
+            //siparisteki verileri çekiyor
+            String sql2 = "select * from siparis";
+            stat2 = connection.prepareStatement(sql2);
+            ResultSet rs2 = stat2.executeQuery();
+            List<SiparisItem> arrayList3 = new ArrayList<SiparisItem>();
+            while (rs2.next()) {
+                String siparis_yemek_adi2 = rs2.getString("siparisadi");
+                String siparis_yemek_ucreti2 = rs2.getString("siparisucreti");
+                int siparis_adeti=rs2.getInt("siparisadet");
+                SiparisItem siparisItem2 = new SiparisItem();
+                siparisItem2.setSiparisYemekAdi(siparis_yemek_adi2);
+                siparisItem2.setSiparisYemekUcreti(siparis_yemek_ucreti2);
+                siparisItem2.setSiparisAdeti(siparis_adeti);
+                arrayList3.add(siparisItem2);
+            }
+            request.setAttribute("items2",arrayList3);
+
 
             RequestDispatcher rd = request.getRequestDispatcher("SiparisVer.jsp");
             rd.forward(request, response);

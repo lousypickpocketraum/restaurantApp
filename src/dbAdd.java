@@ -22,8 +22,8 @@ public class dbAdd extends HttpServlet {
   	                + "VALUES (" + "'" + yemekAdiEkle + "'" +"," + yemekUcretiEkle2 + ")";
  			 stat = connection.prepareStatement(add);
  			 stat.executeUpdate(add);
- 			 // anasayfaya yönlendirme
- 			response.sendRedirect(request.getContextPath());
+ 			 // dbFetch yönlendirme
+ 			response.sendRedirect("menuDuzenle");
 		} catch (SQLException| ClassNotFoundException e) {
 			e.printStackTrace();
 		} finally {
